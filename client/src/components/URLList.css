@@ -1,0 +1,20 @@
+.url-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.url-list th, .url-list td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.url-list a {
+  color: #007bff;
+}
+.truncate-cell {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
