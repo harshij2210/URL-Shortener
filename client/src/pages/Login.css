@@ -1,0 +1,103 @@
+/* Custom login styles */
+.card {
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-label {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Animation for form validation */
+.is-invalid {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .btn {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.form-control:focus,
+.btn-outline-secondary:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Hover effects */
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}

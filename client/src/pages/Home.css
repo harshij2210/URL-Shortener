@@ -1,0 +1,35 @@
+/* Custom hover effects and additional styling */
+.hover-text-dark:hover {
+  color: #212529 !important;
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.shadow-lg:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Responsive text sizing */
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+}
+
+.bg-gradient-light {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #faf5ff 100%);
+}

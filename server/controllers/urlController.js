@@ -1,11 +1,11 @@
 const Url = require('../models/Url');
-const { nanoid } = require('nanoid'); // (assuming you downgraded nanoid; if not, use dynamic import)
+const { nanoid } = require('nanoid'); 
 const BASE_DOMAIN = process.env.BASE_DOMAIN || 'http://localhost:5000';
 
 exports.shortenUrl = async (req, res) => {
-  // accept either field name
+ 
   const originalUrl = req.body.originalUrl || req.body.longUrl;
-  const userId = req.user; // set in auth middleware
+  const userId = req.user; 
 
   if (!originalUrl) {
     return res.status(400).json({ msg: "originalUrl is required" });
@@ -20,7 +20,7 @@ exports.shortenUrl = async (req, res) => {
       shortUrl,
     });
 
-    // return the saved Mongo doc so frontend can use uniform fields
+   
     return res.json(
      {
       ...newUrl.toObject(),
@@ -44,5 +44,20 @@ exports.getMyUrls = async (req, res) => {
   } catch (err) {
     console.error("getMyUrls error:", err.message);
     return res.status(500).json({ msg: "Server error" });
+  }
+};
+
+
+exports.deleteUrl = async (req, res) => {
+  try {
+    const url = await Url.findOne({ _id: req.params.id, userId: req.user });
+
+    if (!url) return res.status(404).json({ msg: "URL not found" });
+
+    await url.deleteOne();
+    res.json({ msg: "URL deleted successfully" });
+  } catch (err) {
+    console.error("deleteUrl error:", err.message);
+    res.status(500).json({ msg: "Server error" });
   }
 };

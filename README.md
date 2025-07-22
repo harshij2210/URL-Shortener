@@ -1,4 +1,4 @@
-## URL-Shortener
+## LinkShort - URL Shortener Web Application
 A MERN Stack URL Shortener with Authentication, Analytics, and Click Tracking. Users can register, log in, shorten long URLs, and view click analytics for each shortened link.
 
 ## Features

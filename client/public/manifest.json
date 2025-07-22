@@ -1,20 +1,20 @@
 {
-  "short_name": "URL Shortener",
-  "name": "URL Shortener",
+  "short_name": "LinkShort",
+  "name": "LinkShort - A URL Shortener",
   "icons": [
     {
-      "src": "3214679.png",
+      "src": "LinkIcon.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "3214679.png",
+      "src": "LinkIcon.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "3214679.png",
-      "type": "image/png",
+      "src": "LinkIcon.jpg",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],

@@ -22,7 +22,12 @@ exports.register = async (req, res) => {
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
 
     console.log("✅ User created:", user);
-    res.json({ token });
+    res.json({ token,
+      user: {
+        name: user.name,
+        email: user.email,
+      },
+     });
   } catch (err) {
     console.error("❌ Error during registration:", err.message);
     res.status(500).json({ msg: "Server error" });
@@ -42,7 +47,12 @@ exports.login = async (req, res) => {
     if (!isMatch) return res.status(400).json({ msg: "Invalid credentials" });
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
-    res.json({ token });
+    res.json({ token,
+      user: {
+        name: user.name || "User",
+        email: user.email,
+      },
+     });
   } catch (err) {
     res.status(500).json({ msg: "Server error" });
   }
