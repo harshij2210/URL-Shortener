@@ -1,7 +1,7 @@
 ## LinkShort - URL Shortener Web Application
 A MERN Stack URL Shortener with Authentication, Analytics, and Click Tracking. Users can register, log in, shorten long URLs, and view click analytics for each shortened link.
 ### Production link 
-https://url-ww-shortener.vercel.app/
+https://urls-linkshort.vercel.app
 ## Features
 - User Registration & Login (JWT Authentication)
 - Shorten Long URLs into Unique Short Links
